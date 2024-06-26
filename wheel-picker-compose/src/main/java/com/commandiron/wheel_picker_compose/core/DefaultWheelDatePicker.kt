@@ -37,8 +37,8 @@ internal fun DefaultWheelDatePicker(
     val months = (1..12).map {
         Month(
             text = if(size.width / 3 < 55.dp){
-                DateFormatSymbols().shortMonths[it - 1]
-            } else DateFormatSymbols().months[it - 1],
+                "${DateFormatSymbols().shortMonths[it - 1]}($it)"
+            } else "${DateFormatSymbols().months[it - 1]}($it)",
             value = it,
             index = it - 1
         )
@@ -106,7 +106,7 @@ internal fun DefaultWheelDatePicker(
             //Month
             WheelTextPicker(
                 size = DpSize(
-                    width = if(yearsRange == null) size.width / 2 else size.width / 3,
+                    width = size.width / 2,
                     height = size.height
                 ),
                 texts = months.map { it.text },

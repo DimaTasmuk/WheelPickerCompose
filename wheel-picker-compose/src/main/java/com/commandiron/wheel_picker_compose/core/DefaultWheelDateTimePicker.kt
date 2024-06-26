@@ -52,7 +52,7 @@ internal fun DefaultWheelDateTimePicker(
                 startDate = startDateTime.toLocalDate(),
                 yearsRange = yearsRange,
                 size = DpSize(
-                    width = if(yearsRange == null ) size.width * 3 / 6 else size.width * 3 / 5 ,
+                    width = size.width * 3 / 5,
                     height = size.height
                 ),
                 rowCount = rowCount,
@@ -100,7 +100,7 @@ internal fun DefaultWheelDateTimePicker(
                 startTime = startDateTime.toLocalTime(),
                 timeFormat = timeFormat,
                 size = DpSize(
-                    width = if(yearsRange == null ) size.width * 3 / 6  else size.width * 2 / 5 ,
+                    width = size.width * 2 / 5 ,
                     height = size.height
                 ),
                 rowCount = rowCount,
